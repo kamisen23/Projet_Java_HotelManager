@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.hotel.controller.MainController"
+      spacing="20"
+      styleClass="root"
+      stylesheets="@../css/style.css">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- Dashboard Section -->
+    <GridPane hgap="20" vgap="20" styleClass="dashboard">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        
+        <!-- Personnel Statistics -->
+        <VBox spacing="10" styleClass="stats-container" GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <Label text="Statistiques du Personnel" styleClass="stats-title"/>
+            <Label fx:id="totalEmployeesLabel" styleClass="stats-value"/>
+            <Label fx:id="totalSalaryLabel" styleClass="stats-value"/>
+        </VBox>
+        
+        <!-- Financial Statistics -->
+        <VBox spacing="10" styleClass="stats-container" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <Label text="Statistiques Financières" styleClass="stats-title"/>
+            <Label fx:id="totalRevenueLabel" styleClass="stats-value"/>
+            <Label fx:id="totalExpensesLabel" styleClass="stats-value"/>
+        </VBox>
+    </GridPane>
+
+    <!-- Main Content -->
+    <TabPane fx:id="mainTabPane" VBox.vgrow="ALWAYS">
+        <!-- Personnel Management Tab -->
+        <Tab text="Gestion du Personnel" style="-fx-font-weight: bold;" closable="false">
+            <VBox spacing="15">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+                
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Button text="Ajouter un employé" onAction="#handleAddEmployee" styleClass="add-button"/>
+                    <Button text="Modifier Employé" onAction="#handleEditEmployee" styleClass="edit-button"/>
+                    <Button text="Supprimer Employe" onAction="#handleDeleteEmployee" styleClass="delete-button"/>
+                </HBox>
+                
+                <ScrollPane fitToWidth="false" fitToHeight="false" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                    <TableView fx:id="employeeTable" minWidth="900"/>
+                </ScrollPane>
+            </VBox>
+        </Tab>
+        
+        <!-- Financial Management Tab -->
+        <Tab text="Gestion Financière" style="-fx-font-weight: bold;" closable="false">
+            <VBox spacing="15">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+                
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Button text="Nouvelle Transaction" onAction="#handleAddTransaction" styleClass="add-button"/>
+                    <Button text="Modifier Transaction" onAction="#handleEditTransaction" styleClass="edit-button"/>
+                    <Button text="Supprimer Transaction" onAction="#handleDeleteTransaction" styleClass="delete-button"/>
+                </HBox>
+                
+                <ScrollPane fitToWidth="false" fitToHeight="false" hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+                    <TableView fx:id="transactionTable" minWidth="900" styleClass="table-view"/>
+                </ScrollPane>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

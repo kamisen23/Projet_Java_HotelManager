@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hotel.LoginController" prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <ImageView fx:id="backgroundImage" fitWidth="800.0" fitHeight="600.0">
+            <image>
+                <Image url="@/images/imageBackground.jpg" /> <!-- Chemin relatif depuis le répertoire des ressources -->
+            </image>
+        </ImageView>
+        <Label layoutX="360.0" layoutY="260.0" text="Login" style="-fx-font-weight: bold; -fx-text-fill: white; -fx-stroke: #1E90FF; -fx-stroke-width: 2; -fx-effect: dropshadow(gaussian,#1E90FF, 3, 0.9, 0, 0);">
+            <font>
+                <Font name="Arial" size="30"/>
+            </font>
+        </Label>
+        <TextField fx:id="usernameField" layoutX="275.0" layoutY="310.0" prefWidth="250.0" promptText="Nom d'utilisateur"/>
+        <PasswordField fx:id="passwordField" layoutX="275.0" layoutY="360.0" prefWidth="250.0" promptText="Mot de passe"/>
+        <Button layoutX="350.0" layoutY="410.0" text="Se connecter" onAction="#handleLogin" style="-fx-background-color: linear-gradient(to bottom, #F5F5DC, #D2B48C); -fx-text-fill: #4A2F1A; -fx-font-weight: bold; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, #D2B48C, 10, 0.5, 0, 0); -fx-padding: 10 20 10 20;"/>
+    </children>
+</AnchorPane>

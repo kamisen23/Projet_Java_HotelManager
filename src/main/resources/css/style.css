@@ -1,0 +1,262 @@
+/* Variables globales */
+* {
+    -fx-dark-background-alt: transparent;
+    -fx-dark-background-hover: transparent;
+}
+
+/* Styles de base */
+.root {
+    font-family: 'Segoe UI', sans-serif;
+    -fx-font-family: 'Segoe UI', sans-serif;
+    background-color: cadetblue;
+    -fx-background-color: cadetblue;
+}
+
+/* Style du Dashboard */
+.dashboard {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-background-radius: 5;
+
+}
+
+.dashboard-title {
+    font-size: 16px;
+    -fx-font-size: 16px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    color: #2c3e50;
+    -fx-text-fill: #2c3e50;
+}
+
+.dashboard-value {
+    font-size: 24px;
+    -fx-font-size: 24px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    color: #3498db;
+    -fx-text-fill: #3498db;
+}
+
+.dashboard-label {
+    font-size: 14px;
+    -fx-font-size: 14px;
+    color: #7f8c8d;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* Style des Boutons */
+.button {
+    background-color: #3498db;
+    -fx-background-color: #3498db;
+    color: white;
+    -fx-text-fill: white;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    padding: 8 15;
+    -fx-padding: 8 15;
+    border-radius: 5px;
+    -fx-background-radius: 5px;
+    border: 1px solid #3498db;
+
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    -fx-background-color: #2980b9;
+    cursor: pointer;
+    -fx-cursor: hand;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    -fx-background-color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+    -fx-background-color: #c0392b;
+}
+
+/* Style des Tableaux */
+.table-view {
+    min-width: 900px;
+    -fx-min-width: 900px;
+    border: 1px solid #e0e0e0;
+}
+
+.table-view.dark-mode {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    background-color: #3498db;
+    -fx-background-color: #3498db;
+    border: 1px solid #e0e0e0;
+}
+
+.table-view .column-header {
+    background-color: transparent;
+    -fx-background-color: transparent;
+    border-width: 0;
+    -fx-border-width: 0;
+    border-color: transparent;
+    -fx-border-color: transparent;
+    size: 35;
+    -fx-size: 35;
+    color: white;
+    -fx-text-fill: white;
+    min-width: 100px;
+    flex: 1;
+}
+
+.table-view .column-header .label {
+    color: #ecf0f1;
+    -fx-text-fill: #ecf0f1;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    font-size: 14px;
+    -fx-font-size: 14px;
+}
+
+/* Style des barres de défilement */
+.scroll-pane {
+    padding: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane > .viewport {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    background-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    background-color: #3a3a3a;
+    -fx-background-color: #3a3a3a;
+    border-radius: 5px;
+    -fx-background-radius: 5px;
+    cursor: pointer;
+    -fx-cursor: hand;
+    transition: background-color 0.2s;
+    -fx-transition: background-color 0.2s;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    background-color: #4a4a4a;
+    -fx-background-color: #4a4a4a;
+}
+
+/* Style des étiquettes */
+.label {
+    color: white;
+    -fx-text-fill: white;
+    font-size: 13px;
+    -fx-font-size: 13px;
+}
+
+.header-label {
+    color: white;
+    -fx-text-fill: white;
+    font-size: 24px;
+    -fx-font-size: 24px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+/* Style des conteneurs */
+.container {
+    padding: 15px;
+    -fx-padding: 15px;
+    background-color: transparent;
+    -fx-background-color: transparent;
+    border: 1px solid #e0e0e0;
+}
+
+/* Style des statistiques */
+.stats-container {
+    padding: 15px;
+    -fx-padding: 15px;
+    background-color: white;
+    -fx-background-color: white;
+    border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+    border: 1px solid #e0e0e0;
+}
+
+.stats-title {
+    font-size: 18px;
+    -fx-font-size: 18px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    color: #2c3e50;
+    -fx-text-fill: #2c3e50;
+}
+
+.stats-value {
+    font-size: 24px;
+    -fx-font-size: 24px;
+    font-weight: bold;
+    -fx-font-weight: bold;
+    color: #3498db;
+    -fx-text-fill: #3498db;
+}
+
+.stats-label {
+    font-size: 14px;
+    -fx-font-size: 14px;
+    color: #7f8c8d;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* Style des Onglets */
+.tab-pane {
+    -fx-tab-min-height: 40;
+}
+
+.tab {
+    background-color: cadetblue;
+    -fx-background-color: cadetblue;
+    padding: 10 15;
+    -fx-padding: 10 15;
+}
+
+.tab-header-background {
+    background-color: cadetblue;
+    -fx-background-color: cadetblue;
+}
+
+.tab:selected {
+    background-color: #3498db;
+    -fx-background-color: #3498db;
+}
+
+.tab:selected .tab-label {
+    color: white;
+    -fx-text-fill: white;
+    font-weight: bold;
+    -fx-font-weight: bold;
+}
+
+.tab .tab-label {
+    color: #2c3e50;
+    -fx-text-fill: #2c3e50;
+    font-size: 14px;
+    -fx-font-size: 14px;
+}
+
+/* Animation des boutons */
+.button {
+    transition: background-color 0.2s;
+    -fx-transition: background-color 0.2s;
+}
